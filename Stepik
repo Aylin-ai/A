@@ -1,0 +1,22 @@
+genome = input()
+d = 1
+n = 0
+j = len(genome)
+e = ''
+r = ''
+if len(genome) < 2:
+    while 1:
+        if j < 2:        
+            r += 'a' + str(d)
+        if d == 1:
+            break
+print(r)
+if len(genome) > 1:
+    while n < len(genome):
+        if genome[n + 1] == genome[n]:
+            d += 1
+        if genome[n + 1] != genome[n]:
+            e += 'a' + str(d)
+            d = 1
+        n += 1    
+print(e)
